@@ -1,4 +1,5 @@
 package com.learning;
+import com.learning.PageGenerator;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ public class BackEnd extends AbstractHandler {
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         baseRequest.setHandled(true);
-        response.getWriter().println("<h1>Hello Server!</h1>");
+        response.getWriter().print(PageGenerator.getPage());
     }
 
     public static void main(String[] args) throws Exception {
